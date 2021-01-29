@@ -12,7 +12,7 @@ public class T1Db {
     public T1Db() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/task_1?autoReconnect=true&useSSL=false", "root", "fa3mabekouassa02");
+            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3305/task_1?autoReconnect=true&useSSL=false", "root", "1234");
             st = con.createStatement();
 
         } catch (Exception ex) {
