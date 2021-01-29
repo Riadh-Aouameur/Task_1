@@ -43,6 +43,7 @@ public class Main {
             sheet.addMergedRegion(new CellRangeAddress(40,40,18,19));
             sheet.addMergedRegion(new CellRangeAddress(41,41,18,19));
 
+
             for( int i = 6 ;i<78 ;i++){
                 sheet.addMergedRegion(new CellRangeAddress(i,i,0,2));
                 sheet.addMergedRegion(new CellRangeAddress(i,i,3,5));
@@ -51,6 +52,13 @@ public class Main {
                 sheet.addMergedRegion(new CellRangeAddress(i,i,12,14));
                 sheet.addMergedRegion(new CellRangeAddress(i,i,15,17));
             }
+
+            sheet.addMergedRegion(new CellRangeAddress(42,42,18,19));
+            sheet.addMergedRegion(new CellRangeAddress(43,43,18,19));
+            sheet.addMergedRegion(new CellRangeAddress(44,44,18,19));
+            sheet.addMergedRegion(new CellRangeAddress(45,45,18,19));
+            sheet.addMergedRegion(new CellRangeAddress(46,46,18,19));
+            sheet.addMergedRegion(new CellRangeAddress(47,47,18,19));
 
 
 
@@ -138,7 +146,101 @@ public class Main {
 
 
             }
+            Row row11 = sheet.createRow(42);
+            Cell cell11 = row11.createCell(18);
+            cell11.setCellValue("مجموع الايــرادات......................");
+            cell11.setCellStyle(cellStyle);
 
+            Row row12 = sheet.createRow(43);
+            Cell cell12 = row12.createCell(18);
+            cell12.setCellValue(" ج 0820 - فائض مـــرحل................................................");
+            cell12.setCellStyle(cellStyle);
+
+            Row row13 = sheet.createRow(44);
+            Cell cell13 = row13.createCell(18);
+            cell13.setCellValue("ج     01 - نقل من القسم الفرعي للاستثمار الاقتصادي.........");
+            cell13.setCellStyle(cellStyle);
+
+            Row row14 = sheet.createRow(45);
+            Cell cell14 = row14.createCell(18);
+            cell14.setCellValue("ج    100 - الاقتطاع من أيـــرادات التسييـــر.......................");
+            cell14.setCellStyle(cellStyle);
+
+            Row row15 = sheet.createRow(46);
+            Cell cell15 = row15.createCell(18);
+            cell15.setCellValue(" ج    103 - هـــــبــــات و وصـــــــايا...............................");
+            cell15.setCellStyle(cellStyle);
+
+            Row row16 = sheet.createRow(47);
+            Cell cell16 = row16.createCell(18);
+            cell16.setCellValue(" ج 105 - اعــــــــــانــــــات");
+            cell16.setCellStyle(cellStyle);
+
+            Row row17 = sheet.createRow(49);
+            Cell cell17 = row17.createCell(18);
+            cell17.setCellValue(" ج 1050 - اعــــانــــات الــــدولــــــــة.....................");
+            cell17.setCellStyle(cellStyle);
+
+
+
+
+
+
+
+            Row row18 = sheet.createRow(56);
+            Cell cell18 = row18.createCell(18);
+            cell18.setCellValue(" ج 1051-اعــــــانـــــات الـــــــولايــــــة");
+            cell18.setCellStyle(cellStyle);
+
+
+
+
+
+            Row row19 = sheet.createRow(61);
+            Cell cell19 = row19.createCell(18);
+            cell19.setCellValue("ج 1052 - أمـــوال  للتضــــــــــامـــن................................");
+            cell19.setCellStyle(cellStyle);
+
+            Row row21 = sheet.createRow(66);
+            Cell cell21 = row21.createCell(18);
+            cell21.setCellValue("ج 1059 - اعــــــــــــانـــــات أخـــــــــرى........................");
+            cell21.setCellStyle(cellStyle);
+
+            Row row22 = sheet.createRow(68);
+            Cell cell22 = row22.createCell(18);
+            cell22.setCellValue("ج 160 - نــــــــاتـــــــج الاقتـــــــراضــــــــات");
+            cell22.setCellStyle(cellStyle);
+
+            Row row23 = sheet.createRow(70);
+            Cell cell23 = row23.createCell(18);
+            cell23.setCellValue("ج 212 - التـــصــــرف في العــقـــارات");
+            cell23.setCellStyle(cellStyle);
+
+
+            Row row24 = sheet.createRow(72);
+            Cell cell24 = row24.createCell(18);
+            cell24.setCellValue("ج 240 - التصــرف فــي المنقــــولات و العتــــاد الكبيـــــــر");
+            cell24.setCellStyle(cellStyle);
+
+            Row row25 = sheet.createRow(74);
+            Cell cell25 = row25.createCell(18);
+            cell25.setCellValue("ج 240 - تـــعـــويض أضــــرار الــكـــوارث......................");
+            cell25.setCellStyle(cellStyle);
+
+            Row row26 = sheet.createRow(75);
+            Cell cell26 = row26.createCell(18);
+            cell26.setCellValue("ج 260 - التصـــرف في سنــــدات الــــدولــــة أو المـــؤسســات العمــوميــــة");
+            cell26.setCellStyle(cellStyle);
+
+            Row row27 = sheet.createRow(76);
+            Cell cell27 = row27.createCell(18);
+            cell27.setCellValue("الـــوطنيـــة..........................................................");
+            cell27.setCellStyle(cellStyle);
+
+            Row row28 = sheet.createRow(77);
+            Cell cell28 = row28.createCell(18);
+            cell28.setCellValue("ج 0850 - فـــــــائـــض الايــــــــرادات...........................");
+            cell28.setCellStyle(cellStyle);
 
 
 
