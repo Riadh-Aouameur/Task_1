@@ -1,4 +1,5 @@
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 
@@ -25,10 +26,11 @@ public class C1 {
 
     public  FileOutputStream makeC1( ArrayList <T1>arrayList){
 
+        sheet.setColumnWidth(1, 600);
+
         sheet.addMergedRegion(new CellRangeAddress(0,0,0,19));
         sheet.addMergedRegion(new CellRangeAddress(1,1,0,19));
         sheet.addMergedRegion(new CellRangeAddress(3,5,18,19));
-
 
         sheet.addMergedRegion(new CellRangeAddress(4,4,0,2));
         sheet.addMergedRegion(new CellRangeAddress(4,4,3,5));
@@ -56,13 +58,30 @@ public class C1 {
         sheet.addMergedRegion(new CellRangeAddress(45,45,18,19));
         sheet.addMergedRegion(new CellRangeAddress(46,46,18,19));
         sheet.addMergedRegion(new CellRangeAddress(47,47,18,19));
+        sheet.getPrintSetup().setPaperSize(PrintSetup.A4_PAPERSIZE);
 
 
 
 
         CellStyle cellStyle = workbook.createCellStyle();
+
         cellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
         cellStyle.setAlignment(HorizontalAlignment.CENTER);
+        Font font = workbook.createFont();
+        font.setColor(HSSFColor.HSSFColorPredefined.GREEN.getIndex());
+        cellStyle.setFont(font);
+
+        CellStyle style = workbook.createCellStyle();
+        style.setBorderBottom(BorderStyle.THIN);
+        style.setBottomBorderColor(IndexedColors.BLACK.getIndex());
+        style.setBorderLeft(BorderStyle.THIN);
+        style.setLeftBorderColor(IndexedColors.BLACK.getIndex());
+        style.setBorderRight(BorderStyle.THIN);
+        style.setRightBorderColor(IndexedColors.BLACK.getIndex());
+        style.setBorderTop(BorderStyle.THIN);
+        style.setTopBorderColor(IndexedColors.BLACK.getIndex());
+
+
         Row row = sheet.createRow(0);
         Cell cell = row.createCell(0);
         cell.setCellValue("- 5 ج 1 -");
@@ -71,7 +90,7 @@ public class C1 {
         Row row1 = sheet.createRow(1);
         Cell cell1 = row1.createCell(0);
         cell1.setCellValue("القســــــــــــم الفـــــــــــرعي للتجهيـــــــــــــز العمـــــــــــومي - ورقــــــــة ج - البـــــرامـج  الجـــــــــــــديــــــــــــدة");
-        cell1.setCellStyle(cellStyle);
+       cell1.setCellStyle(style);
 
         Row row2 = sheet.createRow(3);
         Cell cell2 = row2.createCell(18);
@@ -114,28 +133,35 @@ public class C1 {
         cell9.setCellValue("الـــوطنيـــة..........................................................................................");
         cell9.setCellStyle(cellStyle);
 
-        ArrayList<Row> rows = new ArrayList();
+
         ArrayList<Cell> cells = new ArrayList();
         Row row10 = sheet.createRow(4);
         try {
-            for (int i =0 ;i<=6;i++){
 
-                int n=  arrayList.get(i).getId()%100;
-                int anne = arrayList.get(i).getId()/100;
+            int i =5;
+            int d= 0;
+            while (d<=arrayList.size()){
+
+
+                int n=  arrayList.get(d).getId()%100;
+                int anne = arrayList.get(d).getId()/100;
                 System.out.println("N = "+n);
                 System.out.println("Anne = "+anne);
-
                 int k= i*3;
-                cells.add(i,row10.createCell(k));
+
+
+                cells.add(d,row10.createCell(k));
+                cells.get(d).setCellValue("kkkkk");
                 if(n<10){
-                    cells.get(i).setCellValue(anne+"/0"+n);
+                    cells.get(d).setCellValue(anne+"/0"+n);
                 }else {
-                    cells.get(i).setCellValue(anne+"/"+n);
+                    cells.get(d).setCellValue(anne+"/"+n);
                 }
-                cells.get(i).setCellStyle(cellStyle);
 
 
 
+                i--;
+                d++;
             }
 
         }catch (Exception e){
@@ -143,6 +169,17 @@ public class C1 {
 
 
         }
+
+        ArrayList <Row>rows = new ArrayList();
+            for (int i =0; i<7;i++){
+                rows.add(sheet.createRow(24+i));
+                Cell cell12 = rows.get(i).createCell(18);
+                cell12.setCellValue("jjjj");
+
+
+            }
+
+
         Row row11 = sheet.createRow(42);
         Cell cell11 = row11.createCell(18);
         cell11.setCellValue("مجموع الايــرادات......................");
