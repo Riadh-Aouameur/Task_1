@@ -1,5 +1,13 @@
 use task_1;
-insert into T1(id,projectType,atribueX,iDescription,revenues)values(201801,"c","230","تهيئةو تلبيس طريق الدحامنية بني راشد",6249686.28);
-insert into T1(id,projectType,atribueX,iDescription,revenues)values(201802,"c","230","تهيئةو تلبيس طريق بقعة اولاد احمد ببني راشد على مسافة 300م",151455.28);
-insert into T1(id,projectType,atribueX,iDescription,revenues)values(201803,"c","230","تمديد المصب الرئيسي لقنوات الصرف الصحي ببقعة الشرقة",2000000.28);
-insert into T1(id,projectType,atribueX,iDescription,revenues)values(201703,"c","230","تجديد القناة الرئيسية للمياه الصالحة للشرب ملكة 02 بلدية بني راشد",2000010.28);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201801,"c","214","تهيئةو تلبيس طريق الدحامنية بني راشد",6249686.28,6286.28);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201802,"c","230","تهيئةو تلبيس طريق بقعة اولاد احمد ببني راشد على مسافة 300م",151455.28,624968655.57);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201803,"c","230","تمديد المصب الرئيسي لقنوات الصرف الصحي ببقعة الشرقة",2000000.28,1115.44);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201703,"c","230","تجديد القناة الرئيسية للمياه الصالحة للشرب ملكة 02 بلدية بني راشد",2000010.28,22363.55);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201202,"c","214","أشغال بالمدارس الإبتدائية ",321000300.00,55653.55);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201108,"c","214","التسوية الإدارية لهياكل ممتلكات البلدية",325000300.00,258586.54);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201908,"c","214","التسوية الإدارية لهياكل ممتلكات البلدية",3200300.00,125532.65);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201853,"c","230","تمديد المصب الرئيسي لقنوات الصرف الصحي ببقعة الشرقة",2000000.28,1115.44);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201783,"c","230","تجديد القناة الرئيسية للمياه الصالحة للشرب ملكة 02 بلدية بني راشد",2000010.28,22363.55);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201262,"c","230","أشغال بالمدارس الإبتدائية ",321000300.00,55653.55);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201503,"c","230","التسوية الإدارية لهياكل ممتلكات البلدية",325000300.00,258586.54);
+insert into T1(id,projectType,atribueX,iDescription,revenues,expenses)values(201919,"c","230","التسوية الإدارية لهياكل ممتلكات البلدية",3200300.00,125532.65);

@@ -7,4 +7,5 @@ projectType VARCHAR(32) NOT NULL,
 atribueX VARCHAR(32) NOT NULL,
 iDescription VARCHAR(128) NOT NULL,
 revenues float NOT NULL,
+expenses float NOT NULL,
 PRIMARY KEY(id));

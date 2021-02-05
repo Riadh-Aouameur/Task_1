@@ -31,13 +31,14 @@ public class T1Db {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                int id = rs.getInt("id");
+                String id = rs.getString("id");
                 float revenues  = rs.getFloat("revenues");
+                float expenses = rs.getFloat("expenses");
                 String atribueX = rs.getString("atribueX");
                 String iDescription = rs.getString("iDescription");
                 String projectType = rs.getString("projectType");
 
-                T1 t1 = new T1( id, iDescription, atribueX,  revenues, projectType);
+                T1 t1 = new T1( id, iDescription, atribueX,  revenues,  expenses, projectType);
                 arrayList.add(t1);
 
                 //CREATE TABLE T1 (

@@ -1,56 +1,113 @@
 import java.util.Comparator;
 
 public class T1 {
-    public static Comparator<T1> T1RevenuesComparator = new Comparator<T1>() {
 
-        public int compare(T1 s1, T1 s2) {
-           Float StudentName1 = s1.getRevenues();
-            Float StudentName2 = s2.getRevenues();
-
-
-            return StudentName1.compareTo(StudentName2);
-
-        }};
-    public static Comparator<T1> T1IDComparator = new Comparator<T1>() {
-
-        public int compare(T1 s1, T1 s2) {
-
-            int rollno1 = s1.getId();
-            int rollno2 = s2.getId();
-
-
-            return rollno1-rollno2;
-
-
-        }};
-    int id;
+    String id;
     String description;
     String atribueX;
     Float revenues;
+    Float expenses;
     String projectType;
 
-    public T1(int id, String description, String atribueX, Float revenues, String projectType) {
+    public T1(String id, String description, String atribueX, Float revenues, Float expenses, String projectType) {
         this.id = id;
         this.description = description;
         this.atribueX = atribueX;
         this.revenues = revenues;
+        this.expenses = expenses;
         this.projectType = projectType;
     }
+    public static Comparator<T1> T1IDUNVERSEComparator = new Comparator<T1>() {
 
-    void show (){
-        System.out.println("id : "+this.id);
-        System.out.println("description : "+this.description);
-        System.out.println("atribueX : "+this.atribueX);
-        System.out.println("revenues : "+this.revenues);
-        System.out.println("projectType : "+this.projectType);
+        public int compare(T1 s1, T1 s2) {
+            String[] sp1 = s1.getId().split("/");
+            String[] sp2 = s2.getId().split("/");
+            int year1 = Integer.parseInt(sp1[0]);
+            int year2 = Integer.parseInt(sp2[0]);
+            int nb1 = Integer.parseInt(sp2[1]);
+            int nb2 = Integer.parseInt(sp2[1]);
+
+
+            if(year1==year2){
+                if(nb1<nb2){
+                    return -1;
+
+                }
+                else{
+                    return 1;
+
+                }
+
+
+            }else {
+
+                return year2-year1;
+            }
+
+        }
+    };
+    public static Comparator<T1> T1IDComparator = new Comparator<T1>() {
+
+        public int compare(T1 s1, T1 s2) {
+
+
+            String[] sp1 = s1.getId().split("/");
+            String[] sp2 = s2.getId().split("/");
+                int year1 = Integer.parseInt(sp1[0]);
+                int year2 = Integer.parseInt(sp2[0]);
+                int nb1 = Integer.parseInt(sp2[1]);
+                int nb2 = Integer.parseInt(sp2[1]);
+
+
+                if(year1== year2){
+                    if(nb1<nb2){
+                        return -1;
+
+                    }
+                    else{
+                            return 1;
+
+                    }
+
+
+                }else {
+
+                    return year1-year2;
+                }
+
+
+
+
+
+
+
+
+        }
+    };
+    void show() {
+        System.out.println("id : " + this.id);
+
+//        System.out.println("description : " + this.description);
+//        System.out.println("atribueX : " + this.atribueX);
+//        System.out.println("revenues : " + this.revenues);
+//        System.out.println("expenses : " + this.expenses);
+//        System.out.println("projectType : " + this.projectType);
 
     }
 
-    public int getId() {
+    public Float getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(Float expenses) {
+        this.expenses = expenses;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -85,7 +142,6 @@ public class T1 {
     public void setProjectType(String projectType) {
         this.projectType = projectType;
     }
-
 
 
 }
